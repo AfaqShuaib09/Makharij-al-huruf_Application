@@ -1,9 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomeActivity5">
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomeActivity5">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img5_rm" />
+
+
+        <TableLayout
+            android:id="@+id/tblayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="0dp"
+            app:layout_constraintTop_toBottomOf ="@id/imageView"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TableRow android:background="@color/slate_blue">
+
+                <TextView
+                    android:layout_width="376dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="center_horizontal"
+                    android:padding="10sp"
+                    android:text="@string/Table_head1"
+                    android:textColor="@color/white"
+                    android:textSize="14sp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="376dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="center_horizontal"
+                    android:padding="10sp"
+                    android:text="@string/Table_head_2"
+                    android:textColor="@color/white"
+                    android:textSize="14sp">
+
+                </TextView>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="376dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="center_horizontal"
+                    android:padding="10sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/amiri_bold"
+                    android:text="@string/Nit_eeyah1"
+                    android:textSize="14sp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="376dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="center_horizontal"
+                    android:padding="10sp"
+                    android:textColor="@color/black"
+                    android:text="@string/sound_11"
+                    android:textSize="14sp">
+                </TextView>
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/headLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            android:text="Nit-eeyah"
+            android:textColor="@color/slate_blue"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/dream_road"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/slate_blue"
+            android:fontFamily="@font/mohave"
+            android:textColor="@color/white"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="20dp"
+            tools:layout_editor_absoluteX="219dp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintTop_toBottomOf="@+id/tblayout"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="451dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SKIP"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/slate_blue"
+            android:fontFamily="@font/mohave"
+            android:textColor="@color/white"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="20dp"
+            tools:layout_editor_absoluteX="219dp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintTop_toBottomOf="@+id/tblayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="451dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

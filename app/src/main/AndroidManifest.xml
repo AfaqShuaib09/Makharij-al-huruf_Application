@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MakharijAlhurufApplication">
         <activity
+            android:name=".HomeActivity6"
+            android:exported="true" />
+        <activity
             android:name=".HomeActivity5"
             android:exported="true" />
         <activity
