@@ -2,16 +2,19 @@ package com.example.makharijal_hurufapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import java.util.concurrent.TimeUnit;
 
 public class AppActivity1 extends AppCompatActivity implements View.OnClickListener {
 
 
     Button option1, option2, option3, option4;
-    TextView textView;
+    TextView textView, qtextView;
     public static String[] arabicQuestions = new String[10];
     public static String[] arabicAnswers = new String[10];
     public static String[] correct = new String[10];
@@ -45,9 +48,15 @@ public class AppActivity1 extends AppCompatActivity implements View.OnClickListe
         options[0] = randindex;
         for(int i=1;i<4;i++){
             options[i] = getRandomindex();
-        }
+            for (int j = 0; j < i; j++) {
+                if (options[i] == options[j]) {
+                    i--;
+                    break;
+                }
+            }
+       }
     }
-    public void swapIndexes(){
+    public void swapIndexes() {
         int swappingIndex;
         for(int i=0;i<4;i++){
             swappingIndex = generateRandomValue(0,3);
@@ -61,6 +70,33 @@ public class AppActivity1 extends AppCompatActivity implements View.OnClickListe
         option2.setText(sound[options[1]]);
         option3.setText(sound[options[2]]);
         option4.setText(sound[options[3]]);
+    }
+
+    public void defaultSettings(){
+        randindex = getRandomindex();
+        setArabicLetter();
+        fillUniqueIndexes();
+        swapIndexes();
+        setOptions();
+    }
+    public void resetBtnColor(){
+        option1.setBackgroundColor(getResources().getColor(R.color.slate_blue));
+        option2.setBackgroundColor(getResources().getColor(R.color.slate_blue));
+        option3.setBackgroundColor(getResources().getColor(R.color.slate_blue));
+        option4.setBackgroundColor(getResources().getColor(R.color.slate_blue));
+    }
+
+    public boolean checkQuestions(){
+        boolean flag = false;
+        if (questionNo>=10){
+            Intent intent = new Intent(AppActivity1.this, AppActivity2.class);
+            intent.putExtra("string-question", arabicQuestions);
+            intent.putExtra("string-answers", arabicAnswers);
+            intent.putExtra("correctAnswers", correct);
+            startActivity(intent);
+            flag = true;
+        }
+        return flag;
     }
 
     @Override
@@ -82,15 +118,67 @@ public class AppActivity1 extends AppCompatActivity implements View.OnClickListe
 
         textView = findViewById(R.id.letterTextView);
 
+        qtextView = findViewById(R.id.questionTextView);
+
         //logic
-        randindex = getRandomindex();
-        setArabicLetter();
-        fillUniqueIndexes();
-        swapIndexes();
-        setOptions();
+        defaultSettings();
     }
     @Override
     public void onClick(View view) {
+        switch(view.getId()){
+            case R.id.btnOption1:
+                arabicQuestions[questionNo] = arabicLetters[randindex];
+                arabicAnswers[questionNo] = option1.getText().toString();
+                correct[questionNo] = sound[randindex];
+                if(sound[randindex].equalsIgnoreCase(arabicAnswers[questionNo])){
+                    option1.setBackgroundColor(getResources().getColor(R.color.correct));
+                    qtextView.setText("hello");
+                }
+                else{
+                    option1.setBackgroundColor(getResources().getColor(R.color.wrong));
+                     qtextView.setText("hello2");
+                }
+                questionNo++;
+                break;
+            case R.id.btnOption2:
+                arabicQuestions[questionNo] = arabicLetters[randindex];
+                arabicAnswers[questionNo] = option2.getText().toString();
+                correct[questionNo] = sound[randindex];
+                if(sound[randindex].equalsIgnoreCase(arabicAnswers[questionNo])){
+                    option2.setBackgroundColor(getResources().getColor(R.color.correct));
+                }
+                else
+                    option2.setBackgroundColor(getResources().getColor(R.color.wrong));
+                questionNo++;
 
+                break;
+            case R.id.btnOption3:
+                arabicQuestions[questionNo] = arabicLetters[randindex];
+                arabicAnswers[questionNo] = option3.getText().toString();
+                correct[questionNo] = sound[randindex];
+                if(sound[randindex].equalsIgnoreCase(arabicAnswers[questionNo])){
+                    option3.setBackgroundColor(getResources().getColor(R.color.correct));
+                }
+                else
+                    option3.setBackgroundColor(getResources().getColor(R.color.wrong));
+                questionNo++;
+                break;
+            case R.id.btnOption4:
+                arabicQuestions[questionNo] = arabicLetters[randindex];
+                arabicAnswers[questionNo] = option4.getText().toString();
+                correct[questionNo] = sound[randindex];
+                if(sound[randindex].equalsIgnoreCase(arabicAnswers[questionNo])){
+                    option4.setBackgroundColor(getResources().getColor(R.color.correct));
+                }
+                else
+                    option4.setBackgroundColor(getResources().getColor(R.color.wrong));
+                questionNo++;
+                break;
+        }
+        SystemClock.sleep(2000);
+        resetBtnColor();
+        if(!checkQuestions()){
+            defaultSettings();
+        }
     }
 }
