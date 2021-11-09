@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MakharijAlhurufApplication">
         <activity
+            android:name=".HomeActivity5"
+            android:exported="true" />
+        <activity
+            android:name=".HomeActivity4"
+            android:exported="true" />
+        <activity
+            android:name=".HomeActivity3"
+            android:exported="true" />
+        <activity
+            android:name=".HomeActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
