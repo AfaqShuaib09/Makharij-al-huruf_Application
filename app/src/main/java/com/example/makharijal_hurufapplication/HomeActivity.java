@@ -31,6 +31,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 finish();
                 startActivity(intent);
                 break;
+            case R.id.button2:
+                intent = new Intent(HomeActivity.this, AppActivity1.class);
+                finish();
+                startActivity(intent);
+                break;
         }
     }
 }

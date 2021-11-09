@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 public class HomeActivity5 extends AppCompatActivity implements View.OnClickListener  {
-
     Button btnNext, btnSkip;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +26,12 @@ public class HomeActivity5 extends AppCompatActivity implements View.OnClickList
         Intent intent;
         switch(view.getId()){
             case R.id.button:
-                intent = new Intent(HomeActivity5.this, HomeActivity4.class);
+                intent = new Intent(HomeActivity5.this, HomeActivity6.class);
+                finish();
+                startActivity(intent);
+                break;
+            case R.id.button2:
+                intent = new Intent(HomeActivity5.this, AppActivity1.class);
                 finish();
                 startActivity(intent);
                 break;

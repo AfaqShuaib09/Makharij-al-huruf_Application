@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Afaq/AndroidStudioProjects/MakharijalhurufApplication/app/src/main/res/layout-land/activity_app1.xml" value="0.17724867724867724" />
+        <entry key="..\:/Users/Afaq/AndroidStudioProjects/MakharijalhurufApplication/app/src/main/res/layout/activity_app1.xml" value="0.19746376811594202" />
         <entry key="..\:/Users/Afaq/AndroidStudioProjects/MakharijalhurufApplication/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/Afaq/AndroidStudioProjects/MakharijalhurufApplication/app/src/main/res/layout/activity_home2.xml" value="0.20153985507246377" />
         <entry key="..\:/Users/Afaq/AndroidStudioProjects/MakharijalhurufApplication/app/src/main/res/layout/activity_home3.xml" value="0.19746376811594202" />
         <entry key="..\:/Users/Afaq/AndroidStudioProjects/MakharijalhurufApplication/app/src/main/res/layout/activity_home4.xml" value="0.19746376811594202" />
         <entry key="..\:/Users/Afaq/AndroidStudioProjects/MakharijalhurufApplication/app/src/main/res/layout/activity_home5.xml" value="0.1953125" />
+        <entry key="..\:/Users/Afaq/AndroidStudioProjects/MakharijalhurufApplication/app/src/main/res/layout/activity_home6.xml" value="0.209375" />
+        <entry key="..\:/Users/Afaq/AndroidStudioProjects/MakharijalhurufApplication/app/src/main/res/layout/activity_home7.xml" value="0.19746376811594202" />
         <entry key="..\:/Users/Afaq/AndroidStudioProjects/MakharijalhurufApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
