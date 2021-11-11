@@ -1,5 +1,6 @@
 package com.example.makharijal_hurufapplication;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.SystemClock;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -15,6 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class AppActivity1 extends AppCompatActivity implements View.OnClickListener {
 
 
+    private static final String TAG = AppActivity1.class.getName();
     Button option1, option2, option3, option4;
     TextView textView, qtextView;
     public static String[] arabicQuestions = new String[10];
@@ -135,7 +138,7 @@ public class AppActivity1 extends AppCompatActivity implements View.OnClickListe
         qtextView = findViewById(R.id.questionTextView);
 
         //logic
-        if(textView.getText()=="")
+        if(textView.getText().toString().equalsIgnoreCase(""));
             defaultSettings();
     }
     @Override
@@ -196,6 +199,85 @@ public class AppActivity1 extends AppCompatActivity implements View.OnClickListe
                 }
             }
         }, 2000);
+
+    }
+
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+
+        super.onRestoreInstanceState(savedInstanceState);
+
+        String letter = savedInstanceState.getString("arabicLetter");
+        String op1 = savedInstanceState.getString("op1");
+        String op2 = savedInstanceState.getString("op2");
+        String op3 = savedInstanceState.getString("op3");
+        String op4 = savedInstanceState.getString("op4");
+        qtextView.setText(letter);
+        option1.setText(op1);
+        option2.setText(op2);
+        option3.setText(op3);
+        option4.setText(op4);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("arabicLetter", qtextView.getText().toString());
+        savedInstanceState.putString("op1", option1.getText().toString());
+        savedInstanceState.putString("op2", option2.getText().toString());
+        savedInstanceState.putString("op3", option3.getText().toString());
+        savedInstanceState.putString("op4", option4.getText().toString());
+        // etc.
+    }
+
+    @Override
+
+    protected void onStart() {
+
+        super.onStart();
+
+        Log.d(TAG, "onStart Activity Main");
+
+    }
+
+    @Override
+
+    protected void onResume() {
+
+        super. onResume();
+
+        Log.d(TAG, " onResume Activity Main");
+
+    }
+
+    @Override
+
+    protected void onPause() {
+
+        super. onPause();
+
+        Log.d(TAG, " onPause Activity Main");
+
+    }
+
+    @Override
+
+    protected void onStop() {
+
+        super. onStop();
+
+        Log.d(TAG, " onStop Activity Main");
+
+    }
+
+    @Override
+
+    protected void onDestroy() {
+
+        super. onDestroy();
+
+        Log.d(TAG, " onDestroy Activity Main");
 
     }
 }

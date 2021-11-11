@@ -4,10 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class AppActivity2 extends AppCompatActivity {
+public class AppActivity2 extends AppCompatActivity implements View.OnClickListener{
     TextView[] row1 = new TextView[3];
     TextView[] row2 = new TextView[3];
     TextView[] row3 = new TextView[3];
@@ -20,6 +21,7 @@ public class AppActivity2 extends AppCompatActivity {
     TextView[] row10 = new TextView[3];
 
     TextView[] table2Values = new TextView[2];
+    Button btnShare;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
@@ -30,6 +32,8 @@ public class AppActivity2 extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app2);
+         btnShare = findViewById(R.id.btnShare);
+         btnShare.setOnClickListener(this);
 
         table2Values[0] = findViewById(R.id.table2_row2_col2);
         table2Values[0].setText(correctVal);
@@ -117,5 +121,18 @@ public class AppActivity2 extends AppCompatActivity {
         row10[1].setText(answers[9]);
         row10[2].setText(correct[9]);
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        Intent sharingIntent;
+        switch(view.getId()){
+            case R.id.btnShare:
+                sharingIntent = new Intent(Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                sharingIntent.putExtra(Intent.EXTRA_TEXT, "*******makhārij al-ḥurūf*********\n Total Questions: 10\nCorrect Answers: "+table2Values[0].getText().toString()+"\nWrong Answers: "+table2Values[1].getText().toString());
+                startActivity(Intent.createChooser(sharingIntent, "Share using"));
+                break;
+        }
     }
 }
