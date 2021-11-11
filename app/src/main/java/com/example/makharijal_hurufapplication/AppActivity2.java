@@ -18,15 +18,24 @@ public class AppActivity2 extends AppCompatActivity {
     TextView[] row8 = new TextView[3];
     TextView[] row9 = new TextView[3];
     TextView[] row10 = new TextView[3];
+
+    TextView[] table2Values = new TextView[2];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
         String [] questions = intent.getStringArrayExtra("string-question");
         String [] answers = intent.getStringArrayExtra("string-answers");
         String [] correct = intent.getStringArrayExtra("correctAnswers");
+        String correctVal = intent.getStringExtra("correctVal");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app2);
+
+        table2Values[0] = findViewById(R.id.table2_row2_col2);
+        table2Values[0].setText(correctVal);
+
+        table2Values[1] = findViewById(R.id.table2_row3_col2);
+        table2Values[1].setText(Integer.toString(10- Integer.parseInt(correctVal)));
 
         row1[0] = findViewById(R.id.tcol0_row0);
         row1[1] = findViewById(R.id.tcol1_row0);

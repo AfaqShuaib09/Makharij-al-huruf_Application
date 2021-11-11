@@ -89,7 +89,7 @@
             app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/commitLabel"
-            app:srcCompat="@drawable/commit_rez_" />
+            app:srcCompat="@drawable/github_repo_" />
 
         <TextView
             android:id="@+id/commitLabel"

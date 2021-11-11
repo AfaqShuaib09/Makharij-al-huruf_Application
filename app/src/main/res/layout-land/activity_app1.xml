@@ -35,7 +35,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/amiri_bold"
             android:gravity="center"
-            android:text="@string/Tarfiyah_1"
+            android:text=""
             android:textSize="70dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"

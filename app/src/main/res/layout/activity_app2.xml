@@ -10,7 +10,7 @@
     android:fillViewport="true">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".AppActivity2">
 
     <TableLayout
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toTopOf="@id/table2">
 
         <TableRow android:background="@color/slate_blue">
 
@@ -92,7 +92,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=" "
                 android:textSize="14sp">
             </TextView>
 
@@ -104,7 +104,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -134,7 +134,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -146,7 +146,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -176,7 +176,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -188,7 +188,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -218,7 +218,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -230,7 +230,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -260,7 +260,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -272,7 +272,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -302,7 +302,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -314,7 +314,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -344,7 +344,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -356,7 +356,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -386,7 +386,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -398,7 +398,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -428,7 +428,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -440,7 +440,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -470,7 +470,7 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
             </TextView>
 
@@ -482,8 +482,115 @@
                 android:gravity="center_horizontal"
                 android:padding="10sp"
                 android:textColor="@color/black"
-                android:text="@string/sound_4"
+                android:text=""
                 android:textSize="14sp">
+            </TextView>
+
+        </TableRow>
+
+    </TableLayout>
+
+
+
+    <TableLayout
+        android:id="@+id/table2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    <TableRow>
+
+    <TextView
+        android:id="@+id/table2_row1_col1"
+        android:layout_width="376dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:gravity="center_horizontal"
+        android:padding="10sp"
+        android:background="@color/slate_blue"
+        android:text="Total Questions"
+        android:textColor="@color/white"
+        android:textSize="14sp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/table2_row1_col2"
+        android:layout_width="376dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:gravity="center_horizontal"
+        android:padding="10sp"
+        android:textColor="@color/black"
+        android:text="10"
+        android:textSize="14sp">
+
+    </TextView>
+    </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/table2_row2_col1"
+                android:layout_width="376dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:background="@color/correct"
+                android:text="Correct Answers"
+                android:textColor="@color/white"
+                android:textSize="14sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/table2_row2_col2"
+                android:layout_width="376dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="14sp">
+
+            </TextView>
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/table2_row3_col1"
+                android:layout_width="376dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:background="@color/wrong"
+                android:text="Wrong Answers"
+                android:textColor="@color/white"
+                android:textSize="14sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/table2_row3_col2"
+                android:layout_width="376dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="14sp">
+
             </TextView>
 
         </TableRow>
